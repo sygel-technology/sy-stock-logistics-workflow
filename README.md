@@ -1,5 +1,5 @@
 # sy-stock-logistics-workflow
-Odoo sy stock logistics workflow
+Odoo stock logistics workflow
 
 [//]: # (addons)
 
