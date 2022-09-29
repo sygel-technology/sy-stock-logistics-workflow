@@ -7,6 +7,6 @@ Available addons
 ----------------
 addon | version | summary
 --- | --- | ---
-[nombre_tecnico](nombre_tecnico/) | 14.0.1.0.0 | descripcion
+[picking_serial_link](picking_serial_link/) | 14.0.1.0.0 | use list serial number lists in outgoing pickings
 
 [//]: # (end addons)
