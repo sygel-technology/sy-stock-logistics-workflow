@@ -29,7 +29,7 @@ class StockMove(models.Model):
             for move_line in move_lines.filtered(
                 lambda a: a.product_id.tracking == 'serial'
             ):
-                if move_line.lot_name and not move_line.forced_update_serial_qty:                    
+                if move_line.lot_name and not move_line.forced_update_serial_qty:
                     # ONLY ONE SERIAL NUMBER
                     if breaking_char not in (move_line.lot_name or ''):
                         lot_id = self.env['stock.production.lot'].search([
@@ -84,9 +84,11 @@ class StockMove(models.Model):
                                 line['lot_id'] = lot_id.id
                                 quant = self._get_quant(lot_id)
                                 if quant:
-                                    line['location_id'] = quant.location_id.id
-                                    line['product_uom_qty'] = 1.0
-                                    line['forced_update_serial_qty'] = True
+                                    line.update({
+                                        'location_id': quant.location_id.id,
+                                        'product_uom_qty': 1.0,
+                                        'forced_update_serial_qty': True
+                                    })
 
                         if self.picking_type_id.show_reserved:
                             self.update({'move_line_ids': move_lines_commands})
@@ -99,3 +101,15 @@ class StockMove(models.Model):
         if self.product_id and self.product_id.tracking == 'serial':
             ret_vals['context']['show_serial_list'] = self.picking_type_id.use_serial_list
         return ret_vals
+
+    def write(self, vals):
+        ret = super().write(vals)
+        self.filtered(
+            lambda a: any(
+                line.forced_update_serial_qty for line in a.move_line_ids
+            ) or any(
+                line.forced_update_serial_qty for line in a.move_line_nosuggest_ids
+            )
+        )._recompute_state()
+
+        return ret
