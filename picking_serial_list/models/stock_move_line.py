@@ -16,3 +16,4 @@ class StockMoveLine(models.Model):
             if vals.get('forced_update_serial_qty'):
                 vals['product_uom_qty'] = 1.0
         return super().create(vals_list)
+        
