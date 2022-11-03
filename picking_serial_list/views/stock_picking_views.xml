@@ -2,6 +2,17 @@
 <!-- Copyright 2022 Manuel Regidor <manuel.regidor@sygel.es>
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
 <odoo>
+    <record id="picking_serial_list_view_picking_form" model="ir.ui.view">
+        <field name="name">picking.serial.list.view.picking.form</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='operations']/field[@name='move_ids_without_package']" position="before">
+                <field name="show_reserve_list_serial" invisible="1"/>
+                <button name="action_reserve_list_serial" string="Reserve List Serial" type="object" attrs="{'invisible': [('show_reserve_list_serial', '=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
     <record id="picking_serial_list_view_picking_type_form" model="ir.ui.view">
         <field name="name">picking.serial.list.view.picking.type.form</field>
         <field name="model">stock.picking.type</field>
@@ -20,16 +31,6 @@
             <field name="lot_id" position="before">
                 <field name="lot_name" invisible="context.get('show_lots_text') or not context.get('show_serial_list')"/>
                 <field name="forced_update_serial_qty" invisible="1"/>
-            </field>
-        </field>
-    </record>
-    <record id="picking_serial_list_view_stock_move_operations" model="ir.ui.view">
-        <field name="name">picking.serial.list.view.stock.move.operations</field>
-        <field name="model">stock.move</field>
-        <field name="inherit_id" ref="stock.view_stock_move_operations"/>
-        <field name="arch" type="xml">
-            <field name="move_line_ids" position="before">
-                <p class="alert alert-danger" invisible="not context.get('show_serial_list')">Si utiliza una lista de números de serie, pulse SIEMPRE sobre el botón "Confirmar" una vez generadas las líneas. Es importante realizar esta operación para evitar problemas con el stock. Si desea modificar, añadir o eliminar líneas, vuelva a abrir esta ventana después de pulsar el botón "Confirmar".</p>
             </field>
         </field>
     </record>

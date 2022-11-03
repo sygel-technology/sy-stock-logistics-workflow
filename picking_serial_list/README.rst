@@ -30,7 +30,8 @@ Usage
 
 To use this module, you need to:
 
-#. Write a column list of serial numbers in 'Lot/Serial Number Name' in outgoing pickings. If the serial number is available, it will be shown in the Lot/Seria Number column.
+#. Write a column list of serial numbers in 'Lot/Serial Number Name' in outgoing pickings. If the serial number is available, it will be shown in the Lot/Serial Number column.
+#. Click on 'Reserve List Serial' button to reserve the serial numbers introduced using the 'Lot/Serial Number Name' column.
 
 
 ROADMAP
