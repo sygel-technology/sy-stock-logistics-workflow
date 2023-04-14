@@ -8,6 +8,11 @@ Stock Picking Force Availability
 
 This module allows you to force the availability of unavailable products from a delivery order.
 
+To be able to force availability, two conditions must be met:
+
+#. The status of the operation is 'Waitting'.
+#. The 'Operation Type' allows to force the availability.
+
 
 Installation
 ============
@@ -22,7 +27,9 @@ Configuration
 
 To configure this module, you need to:
 
-#. Anything
+#. Go to module 'Inventory' -> 'Configuration' -> 'Operations Types'.
+#. Edit or Create a new Operation Type.
+#. Check the box 'Allow to Force Availability'.
 
 
 Usage
