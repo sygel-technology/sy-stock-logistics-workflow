@@ -4,7 +4,7 @@
 {
     "name": "Stock Picking Force Availability",
     "summary": "Stock Picking Force Availability",
-    "version": "15.0.1.0.0",
+    "version": "15.0.1.0.1",
     "category": "Inventory",
     "website": "https://www.sygel.es",
     "author": "Sygel, Odoo Community Association (OCA)",
