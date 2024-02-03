@@ -2,11 +2,11 @@
 	:target: http://www.gnu.org/licenses/agpl
 	:alt: License: AGPL-3
 
-==========================
-Picking Very High Priority
-==========================
+==================================
+Stock Picking Terms and Conditions
+==================================
 
-This modules adds an extra level of priority in stock pickings, so after it is installed, there are three levels.
+This module allows you to configure and display the terms and conditions that will appear in the Delivery Slip of Stock pickings..
 
 
 Installation
@@ -14,15 +14,21 @@ Installation
 
 To install this module, you need to:
 
-#. Just install.
+#. Only install
 
 
 Configuration
 =============
 
-To configure this module, you need to:
+To configure the terms and conditions that will appear by default:
 
-#. No configuration needed.
+#. Go to settings -> Inventory
+#. Fill in the Terms and Conditions field
+
+To configure the operation types where the terms and conditions will be displayed: 3.
+
+#. Go to the Inventory module -> Settings -> Transaction types
+#. Select the type of operation where you want the terms and conditions to appear.
 
 
 Usage
@@ -30,19 +36,8 @@ Usage
 
 To use this module, you need to:
 
-#. No usage instructions needed
-
-
-ROADMAP
-=======
-
-It only works with serial numbers, not lots.
-
-[ Enumerate known caveats and future potential improvements.
-  It is mostly intended for end-users, and can also help
-  potential new contributors discovering new features to implement. ]
-
-* ...
+#. Create a new delivery slip of the type you just configured.
+#. Print the Delivery Slip
 
 
 Bug Tracker
@@ -64,18 +59,19 @@ Authors
 
 * Sygel, Odoo Community Association (OCA)
 
-
 Contributors
 ~~~~~~~~~~~~
 
-* Manuel Regidor <manuel.regidor@sygel.es>
-
+* Ángel García de la Chica Herrera <angel.garcia@sygel.es>
 
 Maintainer
 ~~~~~~~~~~
 
 This module is maintained by Sygel.
 
+.. image:: https://www.sygel.es/logo.png
+   :alt: Sygel
+   :target: https://www.sygel.es
 
 This module is part of the `Sygel/sy-stock-logistics-workflow <https://github.com/sygel-technology/sy-stock-logistics-workflow>`_.
 
