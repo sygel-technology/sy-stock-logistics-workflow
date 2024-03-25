@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2024 Manuel Regidor <manuel.regidor@sygel.es>
+License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="picking_type_requirement_rules_view_picking_type_form" model="ir.ui.view">
+        <field name="name">picking.type.requirement.rules.view.picking.type.form</field>
+        <field name="model">stock.picking.type</field>
+        <field name="inherit_id" ref="stock.view_picking_type_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='stock_picking_type_lot']/.." position="after">
+                <group string="Requirement Rules">
+                    <group>
+                        <field name="use_requirement_rules" groups="base.group_no_one" />
+                    </group>
+                    <group>
+                        <field name="requirement_rule_ids" groups="base.group_no_one" attrs="{'invisible': [('use_requirement_rules', '=', False)]}" options="{'no_create_edit': True, 'no_create': True}" nolabel="1" />
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
