@@ -3,7 +3,7 @@
 
 {
     'name': 'Stock Manual Shipping Weight',
-    'version': '14.0.1.0.0',
+    'version': '14.0.1.0.1',
     'author': 'Sygel',
     'category': 'Stock',
     'summary': 'The shipping weight field in pickings can be manually edited.',
