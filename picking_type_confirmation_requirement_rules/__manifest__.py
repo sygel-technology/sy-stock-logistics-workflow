@@ -5,7 +5,7 @@
     "name": "Picking Type Confirmation Requirement Rules",
     "version": "15.0.1.0.0",
     "summary": "Required domain conditions when validating a Picking.",
-    "website": "https://www.sygel.es",
+    "website": "https://github.com/sygel-technology/sy-stock-logistics-workflow",
     "author": "Sygel, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "category": "Stock",
@@ -20,5 +20,5 @@
         "security/ir.model.access.csv",
     ],
     "installable": True,
-    "auto_install": False,    
+    "auto_install": False,
 }
