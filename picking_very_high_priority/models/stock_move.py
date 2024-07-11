@@ -3,11 +3,11 @@
 
 from datetime import timedelta
 
-from odoo import models, fields, api
+from odoo import api, fields, models
 
 
 class StockMove(models.Model):
-    _inherit = 'stock.move'
+    _inherit = "stock.move"
 
     priority = fields.Selection(
         selection_add=[
@@ -15,11 +15,17 @@ class StockMove(models.Model):
         ]
     )
 
-    @api.depends('picking_type_id', 'date', 'priority')
+    @api.depends("picking_type_id", "date", "priority")
     def _compute_reservation_date(self):
         for move in self:
-            if move.priority != '2':
+            if move.priority != "2":
                 super()._compute_reservation_date()
-            elif move.picking_type_id.reservation_method == 'by_date' and move.state in ['draft', 'confirmed', 'waiting', 'partially_available']:
+            elif (
+                move.picking_type_id.reservation_method == "by_date"
+                and move.state
+                in ["draft", "confirmed", "waiting", "partially_available"]
+            ):
                 days = move.picking_type_id.reservation_days_before_priority
-                move.reservation_date = fields.Date.to_date(move.date) - timedelta(days=days)
+                move.reservation_date = fields.Date.to_date(move.date) - timedelta(
+                    days=days
+                )

@@ -6,12 +6,12 @@
     "summary": "Picking Very High Priority",
     "version": "15.0.1.0.0",
     "category": "Custom",
-    "website": "https://www.sygel.es",
+    "website": "https://github.com/sygel-technology/sy-stock-logistics-workflow",
     "author": "Sygel, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
     "depends": [
-        'stock',
+        "stock",
     ],
 }
