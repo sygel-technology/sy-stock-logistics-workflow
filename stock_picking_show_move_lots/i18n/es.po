@@ -1,0 +1,21 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_picking_show_move_lots
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-10 16:30+0000\n"
+"PO-Revision-Date: 2024-07-10 16:30+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_picking_show_move_lots
+#: model_terms:ir.ui.view,arch_db:stock_picking_show_move_lots.stock_picking_show_move_lots_view_picking_form
+msgid "Lots/Serial Numbers"
+msgstr "Lotes/Números de serie"
