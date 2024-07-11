@@ -6,19 +6,16 @@
     "summary": "Stock Picking Terms and Conditions",
     "version": "16.0.1.0.0",
     "category": "Stock",
-    "website": "https://www.sygel.es",
+    "website": "https://github.com/sygel-technology/sy-stock-logistics-workflow",
     "author": "Sygel, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        'base',
-        'stock'
-    ],   
+    "depends": ["base", "stock"],
     "data": [
         "views/stock_picking_views.xml",
         "views/res_config_settings_views.xml",
         "views/stock_picking_type_views.xml",
-        "reports/report_deliveryslip.xml"
+        "reports/report_deliveryslip.xml",
     ],
 }
