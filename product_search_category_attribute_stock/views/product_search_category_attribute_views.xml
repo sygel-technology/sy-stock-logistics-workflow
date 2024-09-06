@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 Manuel Regidor <manuel.regidor@sygel.es>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record id="product_search_cat_attr_form_stock_form_view" model="ir.ui.view">
+        <field name="name">product.search.cat.attr.stock.form.view</field>
+        <field name="model">product.search.cat.attr</field>
+        <field
+            name="inherit_id"
+            ref="product_search_category_attribute.product_search_cat_attr_form_view"
+        />
+        <field name="arch" type="xml">
+            <button name="search_products" position="before">
+                <group>
+                    <group>
+                        <field name="search_on_hand" />
+                        <field name="search_forecasted" />
+                    </group>
+                    <group>
+                        <field name="stock_date" />
+                    </group>
+                </group>
+            </button>
+        </field>
+    </record>
+
+</odoo>
