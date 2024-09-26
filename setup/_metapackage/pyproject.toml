@@ -1,0 +1,12 @@
+[project]
+name = "product_search_category_attribute_stock"
+version = "16.0.20240909.0"
+dependencies = [
+    "odoo-addon-product_search_category_attribute_stock>=16.0dev,<16.1dev",
+    "odoo-addon-stock_picking_terms>=16.0dev,<16.1dev",
+]
+classifiers=[
+    "Programming Language :: Python",
+    "Framework :: Odoo",
+    "Framework :: Odoo :: 16.0",
+]
