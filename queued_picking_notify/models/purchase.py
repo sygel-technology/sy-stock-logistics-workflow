@@ -1,7 +1,7 @@
 # Copyright 2020 Manuel Regidor <manuel.regidor@sygel.es>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
-from odoo import models, api
+from odoo import api, models
 
 
 class PurchaseOrder(models.Model):
