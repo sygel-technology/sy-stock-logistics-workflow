@@ -9,16 +9,23 @@ class PurchaseOrderType(models.Model):
 
     picking_mail_notify_ids = fields.One2many(
         name="Picking Mail Notifications",
-        comodel_name="picking.mail.notify",
+        comodel_name="in.picking.mail.notify",
         inverse_name="purchase_order_type_id",
     )
     picking_log_note_notify_ids = fields.One2many(
         name="Picking Log Note Notifications",
-        comodel_name="picking.log.note.notify",
+        comodel_name="in.picking.log.note.notify",
         inverse_name="purchase_order_type_id",
     )
     picking_activity_notify_ids = fields.One2many(
         name="Picking Activity Notifications",
-        comodel_name="picking.activity.notify",
+        comodel_name="in.picking.activity.notify",
         inverse_name="purchase_order_type_id",
     )
+
+    def _get_picking_notify_ids(self):
+        return {
+            "picking_mail_notify_ids": self.picking_mail_notify_ids,
+            "picking_log_note_notify_ids": self.picking_log_note_notify_ids,
+            "picking_activity_notify_ids": self.picking_activity_notify_ids,
+        }
