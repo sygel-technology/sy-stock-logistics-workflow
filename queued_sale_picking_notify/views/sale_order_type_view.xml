@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2020 Manuel Regidor <manuel.regidor@sygel.es>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="sot_sale_order_type_form_view_queued_picking_notify" model="ir.ui.view">
+        <field name="name">view.sale.order.type.form.queued.picking.notify</field>
+        <field name="model">sale.order.type</field>
+        <field name="inherit_id" ref="sale_order_type.sot_sale_order_type_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='mail_notification']" position="inside">
+                <group string="Picking">
+                    <field
+                        name="picking_mail_notify_ids"
+                        nolabel="1"
+                        colspan="2"
+                        context="{'tree_view_ref':'base_queued_notify.mail_notify_mixin_tree'}"
+                    />
+                </group>
+            </xpath>
+            <xpath expr="//page[@name='log_notification']" position="inside">
+                <group string="Picking">
+                    <field
+                        name="picking_log_note_notify_ids"
+                        nolabel="1"
+                        colspan="2"
+                        context="{'tree_view_ref':'base_queued_notify.note_notify_mixin_tree'}"
+                    />
+                </group>
+            </xpath>
+            <xpath expr="//page[@name='activity_notification']" position="inside">
+                <group string="Picking">
+                    <field
+                        name="picking_activity_notify_ids"
+                        nolabel="1"
+                        colspan="2"
+                        context="{'tree_view_ref':'base_queued_notify.activity_notify_mixin_tree'}"
+                    />
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
