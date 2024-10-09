@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+in_picking_activity_notify_manager,in.picking.activity.notify.manager,model_in_picking_activity_notify,in_picking_notify_manager,1,1,1,1
+in_picking_log_note_notify_manager,in.picking.log.note.notify.manager,model_in_picking_log_note_notify,in_picking_notify_manager,1,1,1,1
+in_picking_mail_notify_manager,in.picking.mail.notify.manager,model_in_picking_mail_notify,in_picking_notify_manager,1,1,1,1
+in_picking_activity_notify_user,in.picking.activity.notify.user,model_in_picking_activity_notify,base.group_user,1,0,0,0
+in_picking_log_note_notify_user,in.picking.log.note.notify.user,model_in_picking_log_note_notify,base.group_user,1,0,0,0
+in_picking_mail_notify_user,in.picking.mail.notify.user,model_in_picking_mail_notify,base.group_user,1,0,0,0
