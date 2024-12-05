@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 Alberto Martínez <alberto.martinez@sygel.es>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record id="view_picking_form_printed" model="ir.ui.view">
+        <field name="name">stock.picking.form.printed</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='other_infos']" position="inside">
+                <field name="printed" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="vpicktree_printed" model="ir.ui.view">
+        <field name="name">stock.picking.tree.printed</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.vpicktree" />
+        <field name="arch" type="xml">
+            <field name="state" position="before">
+                <field name="printed" optional="hide" />
+            </field>
+        </field>
+    </record>
+
+</odoo>
