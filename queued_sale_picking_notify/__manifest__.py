@@ -16,5 +16,6 @@
         "security/queued_picking_notify_security.xml",
         "security/ir.model.access.csv",
         "views/sale_order_type_view.xml",
+        "views/stock_picking.xml",
     ],
 }
