@@ -22,8 +22,8 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [picking_product_warn_message](picking_product_warn_message/) | 17.0.1.0.0 |  | This module add a warning popup on stock picking
-[queued_purchase_picking_notify](queued_purchase_picking_notify/) | 17.0.1.0.0 |  | Schedule email/logs/activities notificacions on purchase pickings
-[queued_sale_picking_notify](queued_sale_picking_notify/) | 17.0.1.0.0 |  | Schedule email/logs/activities notificacions on purchase pickings
+[queued_purchase_picking_notify](queued_purchase_picking_notify/) | 17.0.1.1.0 |  | Schedule email/logs/activities notificacions on purchase pickings
+[queued_sale_picking_notify](queued_sale_picking_notify/) | 17.0.1.1.0 |  | Schedule email/logs/activities notificacions on purchase pickings
 [stock_lot_create_set_reference](stock_lot_create_set_reference/) | 17.0.1.0.0 |  | Set the name of the lot as the reference
 [stock_move_responsible](stock_move_responsible/) | 17.0.1.0.0 |  | Responsible field in stock move related to its picking
 
