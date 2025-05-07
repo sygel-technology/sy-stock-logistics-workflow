@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2025 Ángel Rivas <angel.rivas@sygel.es>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="view_stock_move_line_operations_tree_inherit" model="ir.ui.view">
+        <field name="name">stock.move.line.operations.tree.inherit</field>
+        <field name="model">stock.move.line</field>
+        <field name="inherit_id" ref="stock.view_stock_move_line_operation_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='lot_id']" position="after">
+                <field name="show_lot_button" column_invisible="1" />
+                <button
+                    name="action_open_lot_form"
+                    title="Open full Lot form"
+                    type="object"
+                    class="btn btn-link fa fa-external-link"
+                    groups="stock.group_production_lot"
+                    invisible="not show_lot_button or parent.show_quant or parent.has_tracking == 'none' or not parent.show_lots_m2o"
+                />
+            </xpath>
+            <xpath expr="//field[@name='lot_id']" position="attributes">
+                <attribute name="options">{'no_open': True}</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record
+        id="view_stock_move_line_detailed_operation_tree_inherit"
+        model="ir.ui.view"
+    >
+        <field name="name">stock.move.line.detailed.operation.tree.inherit</field>
+        <field name="model">stock.move.line</field>
+        <field
+            name="inherit_id"
+            ref="stock.view_stock_move_line_detailed_operation_tree"
+        />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='lot_id']" position="after">
+                <field name="show_lot_button" column_invisible="1" />
+                <button
+                    name="action_open_lot_form"
+                    title="Open full Lot form"
+                    type="object"
+                    class="btn btn-link fa fa-external-link"
+                    groups="stock.group_production_lot"
+                    invisible="not show_lot_button or not lots_visible"
+                />
+            </xpath>
+            <xpath expr="//field[@name='lot_id']" position="attributes">
+                <attribute name="options">{'no_open': True}</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
