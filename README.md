@@ -25,6 +25,7 @@ addon | version | maintainers | summary
 [queued_purchase_picking_notify](queued_purchase_picking_notify/) | 17.0.1.1.0 |  | Schedule email/logs/activities notificacions on purchase pickings
 [queued_sale_picking_notify](queued_sale_picking_notify/) | 17.0.1.1.0 |  | Schedule email/logs/activities notificacions on purchase pickings
 [stock_lot_create_set_reference](stock_lot_create_set_reference/) | 17.0.1.0.0 |  | Set the name of the lot as the reference
+[stock_move_line_open_lot](stock_move_line_open_lot/) | 17.0.1.0.0 |  | Adds a button in the stock move line tree view to open the related lot record in form view.
 [stock_move_responsible](stock_move_responsible/) | 17.0.1.0.0 |  | Responsible field in stock move related to its picking
 
 [//]: # (end addons)
