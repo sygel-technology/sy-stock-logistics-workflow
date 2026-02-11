@@ -27,6 +27,7 @@ addon | version | maintainers | summary
 [stock_lot_create_set_reference](stock_lot_create_set_reference/) | 17.0.1.0.0 |  | Set the name of the lot as the reference
 [stock_move_line_open_lot](stock_move_line_open_lot/) | 17.0.1.0.0 |  | Adds a button in the stock move line tree view to open the related lot record in form view.
 [stock_move_responsible](stock_move_responsible/) | 17.0.1.0.0 |  | Responsible field in stock move related to its picking
+[stock_picking_weight_bulk_rounding](stock_picking_weight_bulk_rounding/) | 17.0.1.0.0 |  | Round weight_bulk on stock pickings to avoid float precision issues.
 
 [//]: # (end addons)
 

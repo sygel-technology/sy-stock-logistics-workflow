@@ -1,6 +1,6 @@
 [project]
 name = "odoo-addons-sygel-technology-sy-stock-logistics-workflow"
-version = "17.0.20250507.0"
+version = "17.0.20260211.0"
 dependencies = [
     "odoo-addon-picking_product_warn_message>=17.0dev,<17.1dev",
     "odoo-addon-queued_purchase_picking_notify>=17.0dev,<17.1dev",
@@ -8,6 +8,7 @@ dependencies = [
     "odoo-addon-stock_lot_create_set_reference>=17.0dev,<17.1dev",
     "odoo-addon-stock_move_line_open_lot>=17.0dev,<17.1dev",
     "odoo-addon-stock_move_responsible>=17.0dev,<17.1dev",
+    "odoo-addon-stock_picking_weight_bulk_rounding>=17.0dev,<17.1dev",
 ]
 classifiers=[
     "Programming Language :: Python",
