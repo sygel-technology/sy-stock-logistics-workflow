@@ -7,26 +7,23 @@
         <field name="model">stock.picking</field>
         <field name="inherit_id" ref="stock.view_picking_form" />
         <field name="arch" type="xml">
-                <xpath expr="//button[@name='action_assign']" position="after">
-                    <field name="allow_force_availability" invisible="1" />
-                    <button
+            <xpath expr="//button[@name='action_assign']" position="after">
+                <field name="allow_force_availability" invisible="1" />
+                <button
                     name="action_force_availability"
                     class="oe_highlight"
                     string="Force Availability"
                     type="object"
                     attrs="{'invisible': [ '|', ('state', 'in',['draft','assigned','done','cancel']), ('allow_force_availability', '=', False)]}"
                 />
-                </xpath>
-                <xpath
-                expr="//header/button[@name='action_assign']"
-                position="attributes"
-            >
-                    <attribute
+            </xpath>
+            <xpath expr="//header/button[@name='action_assign']" position="attributes">
+                <attribute
                     name="attrs"
                 >{'invisible': ['|',('show_check_availability', '=', False),
                         ('state','=','assigned')]}
                     </attribute>
-                </xpath>
+            </xpath>
         </field>
     </record>
 
