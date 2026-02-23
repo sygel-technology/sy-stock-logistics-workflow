@@ -14,15 +14,11 @@
                     class="oe_highlight"
                     string="Force Availability"
                     type="object"
-                    attrs="{'invisible': [ '|', ('state', 'in',['draft','assigned','done','cancel']), ('allow_force_availability', '=', False)]}"
+                    invisible="state in ['draft','assigned','done','cancel'] or not allow_force_availability"
                 />
             </xpath>
             <xpath expr="//header/button[@name='action_assign']" position="attributes">
-                <attribute
-                    name="attrs"
-                >{'invisible': ['|',('show_check_availability', '=', False),
-                        ('state','=','assigned')]}
-                    </attribute>
+                <attribute name="invisible" add="state == 'assigned'" separator="or" />
             </xpath>
         </field>
     </record>
@@ -37,7 +33,7 @@
         <field name="model">stock.picking.type</field>
         <field name="inherit_id" ref="stock.view_picking_type_form" />
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='show_reserved']" position='after'>
+            <xpath expr="//field[@name='move_type']" position='after'>
                 <field name="allow_force_availability" />
             </xpath>
         </field>
