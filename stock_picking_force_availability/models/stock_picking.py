@@ -4,7 +4,7 @@
 from odoo import fields, models
 
 
-class Picking(models.Model):
+class StockPicking(models.Model):
     _inherit = "stock.picking"
 
     allow_force_availability = fields.Boolean(
@@ -15,20 +15,15 @@ class Picking(models.Model):
     def action_force_availability(self):
         self.ensure_one()
         for move in self.mapped("move_ids_without_package").filtered(
-            lambda x: x.product_id.type == "product" and x.product_id.tracking == "none"
+            lambda x: x.product_id.type == "consu"
+            and x.product_id.is_storable
+            and x.product_id.tracking == "none"
         ):
-            move.write({"quantity_done": move.product_uom_qty})
+            move.write({"quantity": move.product_uom_qty})
 
         if not self.mapped("move_ids_without_package").filtered(
-            lambda x: x.product_id.type == "product" and x.product_id.tracking != "none"
+            lambda x: x.product_id.type == "consu"
+            and x.product_id.is_storable
+            and x.product_id.tracking != "none"
         ):
             self.update({"state": "assigned"})
-
-
-class PickingType(models.Model):
-    _inherit = "stock.picking.type"
-
-    allow_force_availability = fields.Boolean(
-        default=False,
-        string="Allow to Force Availability",
-    )
