@@ -80,7 +80,7 @@ Credits
 Authors
 -------
 
-* Sygel Technology S.L.
+* Sygel
 
 Contributors
 ------------
