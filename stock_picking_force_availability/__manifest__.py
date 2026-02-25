@@ -7,7 +7,7 @@
     "version": "18.0.1.0.0",
     "category": "Inventory",
     "website": "https://github.com/sygel-technology/sy-stock-logistics-workflow",
-    "author": "Sygel Technology S.L.",
+    "author": "Sygel",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
