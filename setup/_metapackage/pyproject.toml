@@ -1,0 +1,11 @@
+[project]
+name = "odoo-addons-sygel-technology-sy-stock-logistics-workflow"
+version = "18.0.20260226.0"
+dependencies = [
+    "odoo-addon-stock_picking_force_availability==18.0.*",
+]
+classifiers=[
+    "Programming Language :: Python",
+    "Framework :: Odoo",
+    "Framework :: Odoo :: 18.0",
+]

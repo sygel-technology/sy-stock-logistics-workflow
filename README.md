@@ -16,6 +16,13 @@ Odoo stock logistics workflow
 <!-- prettier-ignore-start -->
 
 [//]: # (addons)
+
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[stock_picking_force_availability](stock_picking_force_availability/) | 18.0.1.0.0 |  | Stock Picking Force Availability
+
 [//]: # (end addons)
 
 <!-- prettier-ignore-end -->
