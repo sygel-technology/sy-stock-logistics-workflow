@@ -1,0 +1,37 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_picking_force_availability
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-14 11:43+0000\n"
+"PO-Revision-Date: 2023-04-14 11:43+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_picking_force_availability
+#: model:ir.model.fields,field_description:stock_picking_force_availability.field_stock_picking__allow_force_availability
+#: model:ir.model.fields,field_description:stock_picking_force_availability.field_stock_picking_type__allow_force_availability
+msgid "Allow to Force Availability"
+msgstr "Permitir forzar disponibilidad"
+
+#. module: stock_picking_force_availability
+#: model_terms:ir.ui.view,arch_db:stock_picking_force_availability.stock_picking_force_availability_view_picking_form
+msgid "Force Availability"
+msgstr "Forzar Disponibilidad"
+
+#. module: stock_picking_force_availability
+#: model:ir.model,name:stock_picking_force_availability.model_stock_picking_type
+msgid "Picking Type"
+msgstr "Tipo de albarán"
+
+#. module: stock_picking_force_availability
+#: model:ir.model,name:stock_picking_force_availability.model_stock_picking
+msgid "Transfer"
+msgstr "Albarán"
