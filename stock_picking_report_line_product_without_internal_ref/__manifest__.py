@@ -4,7 +4,7 @@
 {
     "name": "Stock Picking Report Line Product Without Internal Reference",
     "summary": "Stock Picking Report Line Product Without Internal Reference",
-    "version": "15.0.1.0.0",
+    "version": "18.0.1.0.0",
     "category": "Stock",
     "website": "https://github.com/sygel-technology/sy-stock-logistics-workflow",
     "author": "Sygel",
