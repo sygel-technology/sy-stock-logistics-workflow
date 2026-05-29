@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 Ángel García de la Chica Herrera <angel.garcia@sygel.es>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <template
+        id="stock_picking_report_line_description_without_internal_ref_report_delivery_document"
+        name="stock.picking.report.line.description.without.internal.ref.report.delivery.document"
+        inherit_id="stock.report_delivery_document"
+    >
+        <!-- Adding the display_default_code context to the o object adds it to all the report.
+        It makes the display_name be computed without the default_code  -->
+        <xpath expr="//t[@t-set='o']" position="after">
+            <t t-if="o.picking_type_id.code=='outgoing'">
+                <t t-set="o" t-value="o.with_context(display_default_code=False)" />
+            </t>
+        </xpath>
+    </template>
+</odoo>
