@@ -1,0 +1,1 @@
+- Migration to upper versions requires refactoring. The module name must be changed. A configuration option should be added inside the picking type to set if the internal ref should be printed or not. Currently, this module always removes the internal ref.
