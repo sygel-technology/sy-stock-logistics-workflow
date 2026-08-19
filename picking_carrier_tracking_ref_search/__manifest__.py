@@ -3,16 +3,14 @@
 {
     "name": "Picking Carrier Tracking Ref Search",
     "summary": "Search by carrier_tracking_ref in stock pickings",
-    "version": "16.0.1.0.0",
+    "version": "18.0.1.0.0",
     "category": "Stock",
     "website": "https://github.com/sygel-technology/sy-stock-logistics-workflow",
     "author": "Sygel, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        "delivery",
-    ],
+    "depends": ["delivery", "stock"],
     "data": [
         "views/stock_picking_views.xml",
     ],
