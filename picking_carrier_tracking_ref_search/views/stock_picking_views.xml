@@ -2,7 +2,6 @@
 <!-- Copyright 2024 Alberto Martínez <alberto.martinez@sygel.es>
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
 <odoo>
-
     <record id="view_picking_internal_search" model="ir.ui.view">
         <field name="name">stock.picking.internal.search</field>
         <field name="model">stock.picking</field>
@@ -13,5 +12,4 @@
             </field>
         </field>
     </record>
-
 </odoo>
