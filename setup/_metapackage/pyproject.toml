@@ -1,7 +1,8 @@
 [project]
 name = "odoo-addons-sygel-technology-sy-stock-logistics-workflow"
-version = "18.0.20260529.0"
+version = "18.0.20260820.0"
 dependencies = [
+    "odoo-addon-picking_edit_printed_status==18.0.*",
     "odoo-addon-stock_picking_force_availability==18.0.*",
     "odoo-addon-stock_picking_report_line_product_without_internal_ref==18.0.*",
     "odoo-addon-stock_picking_very_high_priority==18.0.*",
