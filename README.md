@@ -21,6 +21,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
+[picking_carrier_tracking_ref_search](picking_carrier_tracking_ref_search/) | 18.0.1.0.0 |  | Search by carrier_tracking_ref in stock pickings
 [picking_edit_printed_status](picking_edit_printed_status/) | 18.0.1.0.0 |  | Edit printed status on pickings
 [stock_picking_force_availability](stock_picking_force_availability/) | 18.0.1.0.0 |  | Stock Picking Force Availability
 [stock_picking_report_line_product_without_internal_ref](stock_picking_report_line_product_without_internal_ref/) | 18.0.1.0.1 |  | Stock Picking Report Line Product Without Internal Reference
