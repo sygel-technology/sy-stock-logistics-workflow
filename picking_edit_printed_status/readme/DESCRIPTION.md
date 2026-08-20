@@ -1,0 +1,1 @@
+This module lets you see and manually edit the picking boolean checkbox field of stock pickings
