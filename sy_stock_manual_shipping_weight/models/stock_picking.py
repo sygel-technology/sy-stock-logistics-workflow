@@ -15,10 +15,10 @@ class StockPicking(models.Model):
             if picking.edited_shipping_weight > 0:
                 picking.shipping_weight = picking.edited_shipping_weight
             else:
-                return super(StockPicking, picking)._compute_shipping_weight()
+                return super()._compute_shipping_weight()
 
     edited_shipping_weight = fields.Float(
-        string="Edited Shipping Weight",
+        string="Shipping Weight Edited",
         help="Total weight of the package edited with wizard.",
     )
 
@@ -30,7 +30,7 @@ class StockPicking(models.Model):
             "view_mode": "form",
             "res_model": "edit.shipping.weight.wizard",
             "view_id": self.env.ref(
-                "stock_manual_shipping_weight.edit_shipping_weight_wizard_view_form"
+                "sy_stock_manual_shipping_weight.edit_shipping_weight_wizard_view_form"
             ).id,
             "target": "new",
             "context": {"default_picking_id": self.id},

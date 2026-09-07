@@ -3,15 +3,16 @@
 
 {
     "name": "Stock Manual Shipping Weight",
-    "version": "14.0.1.0.1",
-    "author": "Sygel",
-    "category": "Stock",
     "summary": "The shipping weight field in pickings can be manually edited.",
+    "version": "17.0.1.0.0",
+    "author": "Sygel",
+    "license": "AGPL-3",
+    "category": "Stock",
     "website": "https://github.com/sygel-technology/sy-stock-logistics-workflow",
     "depends": [
         "sale_stock",
         "sale_management",
-        "delivery",
+        "stock_delivery",
     ],
     "data": [
         "security/ir.model.access.csv",
