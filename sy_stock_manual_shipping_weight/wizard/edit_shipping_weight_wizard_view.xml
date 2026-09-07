@@ -20,7 +20,7 @@
                         type="object"
                         string="Apply"
                         class="btn-primary"
-                        attrs="{'readonly':[('shipping_weight','=',False)]}"
+                        readonly="not shipping_weight"
                     />
                     <button string="Discard" special="cancel" class="btn-secondary" />
                 </footer>
