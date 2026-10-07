@@ -1,0 +1,4 @@
+-   [Sygel](https://www.sygel.es):
+    -   Valentín Vinagre
+    -   Roger Sans
+    -   Ángel García de la Chica Herrera
